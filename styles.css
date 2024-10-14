@@ -8,6 +8,7 @@
     height: 300px;
     margin: 20px;
     margin-bottom: 100px;
+    border-radius:20px;
 }
 .movie-card img{
     width:250px;

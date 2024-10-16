@@ -1,8 +1,8 @@
-const API_KEY = 'd4703e60cf0d1782ebbe2f62ec94230a';
+const apiKey = process.env.API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 function trendingMovies(){
-    fetch(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`)
+    fetch(`${BASE_URL}/trending/movie/week?api_key=${apiKey}`)
     .then(response => response.json())
     .then(data => displayMovies(data.results))
     .catch(error => console.error('Error:', error));

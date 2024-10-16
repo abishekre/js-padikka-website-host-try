@@ -10,6 +10,7 @@ function trendingMovies(){
 
 function displayMovies(movies){
     console.log(movies);
+    console.log("this is console");
     const trendingBody = document.getElementById("trending-body");
     trendingBody.innerHTML='';
     movies.forEach(movie => {

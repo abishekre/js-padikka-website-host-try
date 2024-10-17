@@ -14,11 +14,14 @@ function displayMovies(movies){
     const trendingBody = document.getElementById("trending-body");
     trendingBody.innerHTML='';
     movies.forEach(movie => {
-        trendingBody.innerHTML+=`<div class="movie-card-${movie.id} movie-card">
+        trendingBody.innerHTML+=`
+        <div class="movie-card-${movie.id} movie-card">
             <div class="movie-image">
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+                <img class="posterImage" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+                <img class="coverImage" src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.title}">
                 <div class="movie-title">
-                    ${movie.title}
+                    <p class="title">${movie.title}</p>
+                    <p class="description">${movie.overview}</p>
                 </div>
             </div>
         </div>

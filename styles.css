@@ -1,16 +1,83 @@
+body{
+    font-family: 'Inter';
+    background-color: rgb(31, 31, 31);
+    color: #fff;
+}
 .trending-body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width:80px;
+    width:100vw;
+}
+.trending-header{
+    width: 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 42px;
 }
 .movie-card{
     width: 250px;
-    height: 300px;
-    margin: 20px;
-    margin-bottom: 100px;
-    border-radius:15px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.1),-4px -4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px; /* Add some spacing between cards */
 }
 .movie-card img{
-    width:250px;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%; /* Maintain height of the original image */
+    transition: height 0.5s ease, opacity 0.5s ease;
+    object-fit: cover; /* Maintain aspect ratio */
+    position: absolute; /* Position images absolutely within the card */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+}
+/* .movie-card:hover img.posterImage {
+    height: 200px; /* Height of the first image on hover */
+
+.movie-card:hover img.coverImage {
+    height: 200px; /* Height of the second image on hover */
+    opacity: 1;
+}
+
+.movie-card img.coverImage {
+    opacity: 0; /* Initially hidden */
+}
+
+.movie-card:hover .title {
+    transform: translateY(0);
+    opacity: 1;
+}
+.movie-title {
+    position: absolute;
+    height: 150px;
+    bottom: -170px; /* Start off-screen */
+    color: #fff;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(12, 12, 12, 0.7); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect on the background */
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    text-align: center;
+    transition: transform 0.5s ease, bottom 0.5s ease; /* Animate slide in */
+}
+
+.movie-card:hover .movie-title {
+    bottom: 0; /* Slide up into view */
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.description{
+    margin-top: 3px;
+    font-size: 12px;
+
 }
